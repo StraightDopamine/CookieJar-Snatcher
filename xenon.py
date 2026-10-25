@@ -1,6 +1,6 @@
-lazy import json
-lazy import subprocess
-lazy import requests
+import json
+import subprocess
+import requests
 
 commands = {
     "ip_addresses": "hostname -I",
