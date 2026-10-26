@@ -9,9 +9,10 @@ for p in ports:
     if "USB" in p.description or "CP210" in p.description or "ACM" in p.description:
         port_name = p.device
         break
-        
+# This loop here just identifies which port your on 
+
 if port_name is None:
-	print("Could not find port name")
+	print("Could not find port name") # err handle
 else:
 	print(f"Using port: {port_name}")
     try:
@@ -23,7 +24,9 @@ else:
         elif os_type == "Darwin":
         	ser.write(b"Mac\n")
         ser.close()
+	# writes the code to the serial on the USB ESP 32 S3 so it knows what scripts to execute in specific.
     except Exception as e:
+		# err handle
         print(f"Failed to connect: {e}")
 	else:
     	print("No matching serial port found!")
