@@ -1,16 +1,31 @@
-# description
+# Description
 
-  So practically this functions as a cookie snatcher utilizing a feature called sub requests and processes with these, super operator (sudo) is not needed what so ever. I improved and added my own functionality with this by including a USB stick that uploads this code to the computer and then sends it through a discord webhook. This allows the information to be accessed anywhere in the world and the computer would never know where, as well it incorporates an easy way to gather information. I was also thinking of adding some type of functionality like metadata snatching as well, to get a location to where someone lives which I may add o the future and or also add a txt file snatcher where my USB would compress add zip the files then send them through the discord webhook. but it is what it is. Any ways, this took e a bit, yes I did use AI for the JSON because I haven't used JSON in such a long time but I wanted to code this myself mainly. 
+This project functions as a cookie snatcher utilizing Python subprocesses and sub-requests. **No root privileges are required.** 
 
-# setup
-  * What you need = Custom USB stick ESP-32 S3 purchasable online I bought the LILY-GO T3 Dongle
-  * python installed on hosts computer but you can also use the different methods here like the python environment method for extra security measures
-  * arduino code (C++, also provided so dont worry)
-  * use esperiff github for the esp32 arduino (ai will help with this best in my opinion)
-  * Thats it!
+I improved and added my own functionality by integrating an ESP32-S3 USB device that automatically deploys and executes the payload on the target machine, exfiltrating data via a Discord webhook. This allows the information to be accessed remotely while leaving a minimal operational footprint. 
 
+### Future Ideas / Roadmap:
+* **Metadata Snatching:** Pulling location/geographical metadata.
+* **Archive Exfiltration:** Compressing target text files into a `.zip` archive before exfiltrating them through the Discord webhook.
 
-# operation
-  * still working on this part stay tuned
+*Note: Yes, AI was used to help structure the JSON payload handling since I haven't worked with JSON in a while, but the core implementation and logic were built from scratch.*
 
+---
 
+# Setup
+
+* **Hardware:** Custom ESP32-S3 USB stick (tested with the LILY-GO T3 Dongle).
+* **Target Environment:** Python installed on the host computer (the payload utilizes a temporary Python virtual environment for security and dependency management).
+* **Firmware:** Arduino code (C++, provided in the repo).
+* **Dependencies:** Uses the official Espressif GitHub core for the ESP32 Arduino environment.
+
+---
+
+# Operation
+
+To deploy and run this code securely:
+
+1. Clone this repository and **keep it private** so your Discord webhook URL is not exposed publicly.
+2. Add your personal Discord webhook URL into your Python script (`xenon.py`).
+3. Update the Arduino code (`.ino`) to point to your own raw GitHub URL rather than the default template.
+4. Flash the code to your ESP32-S3 and deploy.
