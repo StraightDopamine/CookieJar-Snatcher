@@ -6,7 +6,7 @@ I improved and added my own functionality by integrating an ESP32-S3 USB device 
 
 ### Future Ideas / Roadmap:
 * **Metadata Snatching:** Pulling location/geographical metadata.
-* **Archive Exfiltration:** Compressing target text files into a `.zip` archive before exfiltrating them through the Discord webhook.
+* **TinyFlask or FastAPI:** So I was thinking, instead of Discord Webhook which _can_ get you banned :( instead we can use FastAPI or TinyFlask to transfer the data more effectively.
 
 *Note: Yes, AI was used to help structure the JSON payload handling since I haven't worked with JSON in a while, but the core implementation and logic were built from scratch.*
 
