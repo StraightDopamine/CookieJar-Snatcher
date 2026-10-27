@@ -30,4 +30,4 @@ To deploy and run this code securely:
 3. Update the Arduino code (`.ino`) to point to your own raw GitHub URL rather than the default template. 
 4. Flash the code to your ESP32-S3 and deploy.
 
-Note: Note: So this Arduino one liner was primarily me with the env and curl but the piping through the discord webhook in Arduino was not mine I had never thought of it until I ran into token issues with private repos but its all fixed now
+Note: So this Arduino one liner was primarily me with the env and curl but the piping through the discord webhook in Arduino was not mine I had never thought of it until I ran into token issues with private repos but its all fixed now
