@@ -25,9 +25,8 @@ I improved and added my own functionality by integrating an ESP32-S3 USB device 
 
 To deploy and run this code securely:
 
-1. Clone this repository and **keep it private** so your Discord webhook URL is not exposed publicly.
-2. Add your personal Discord webhook URL into your Python script (`xenon.py`).
-3. Update the Arduino code (`.ino`) to point to your own raw GitHub URL rather than the default template. 
-4. Flash the code to your ESP32-S3 and deploy.
+1. So I made some major updates with the code where you no longer need to clone it
+2. Now all you do is copy and flash the code from the arduino into the USB with your discord webhook attached of course
+3. Thats it your ready to go without anything new.
 
 Note: So this Arduino one liner was primarily me with the env and curl but the piping through the discord webhook in Arduino was not mine I had never thought of it until I ran into token issues with private repos but its all fixed now
