@@ -1,6 +1,7 @@
 import json
 import subprocess
 import requests
+import sys
 
 commands = {
     "ip_addresses": "hostname -I",
@@ -56,10 +57,15 @@ with open(json_filename, "w", encoding="utf-8") as f:
 
 print(f"compiled the file {json_filename}")
 
-webhook_url = (
+if len(sys.argv) > 1:
+    webhook_url = sys.argv[1]
+else:
+    webhook_url = (
     ""
-)
+    ) 
 # enter discord webhook url here
+
+
 headers = {
     "User-Agent": (
         "Mozilla/5.0 (X11; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0" 
